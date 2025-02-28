@@ -12,7 +12,8 @@ body {
   background: radial-gradient(circle, rgba(237, 232, 237, 1) 0%, rgba(255, 253, 255, 1) 50%, rgba(237, 232, 237, 1) 100%);
   color: #333;
   line-height: 1.6;
-  padding-top: 80px;
+  padding-top: 75px;
+  scroll-behavior: smooth;
   /* Espaço para a navbar fixa */
 }
 
@@ -21,6 +22,7 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
+  height: 12vh;
   z-index: 1000;
   display: flex;
   align-items: center;
@@ -34,19 +36,16 @@ body {
   font-size: 1.5rem;
   text-decoration: none;
   font-weight: bold;
-
   font-family: "Lexend Deca", Arial, Helvetica, sans-serif;
 }
 
 .nav-links {
   list-style: none;
   display: flex;
-
 }
 
 .nav-links li {
   margin: 0 1rem;
-
 }
 
 .nav-links a {
@@ -136,7 +135,6 @@ a img {
   font-size: 4vw;
   margin-bottom: 0.5rem;
   font-family: "Lexend Deca", sans-serif;
-
 }
 
 .banner-content p {
@@ -168,7 +166,7 @@ a img {
   }
 }
 
-/* Carousel: cada slide ocupa 100% da largura */
+/* Carousel (Imagens do Banner) */
 .carousel {
   position: relative;
   margin: 2rem auto;
@@ -193,13 +191,13 @@ a img {
   /* Garante que a imagem ocupe toda a altura do container */
   flex-shrink: 0;
   object-fit: cover;
-  /* Faz a imagem preencher o espaço, cortando o excesso */
+  /* Preenche o espaço, cortando o excesso */
   object-position: center;
-  /* Centraliza a parte visível da imagem */
+  /* Centraliza a parte visível */
   border-radius: 1vh;
 }
 
-/* Botões do Carousel: redondos e centralizados verticalmente */
+/* Botões do Carousel (Banner): redondos e centralizados verticalmente */
 .carousel .prev,
 .carousel .next {
   position: absolute;
@@ -234,10 +232,9 @@ a img {
   margin: 2rem 0 1rem;
   text-transform: uppercase;
   letter-spacing: 1px;
-
 }
 
-/* Seção de Produtos: Cards Grandes */
+/* Seção de Produtos: Cards Grandes (Divisórias e Forros) */
 .produtos {
   padding: 2rem;
   background-color: #f9f9f9;
@@ -246,7 +243,6 @@ a img {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-
 }
 
 .produtos-grid {
@@ -255,7 +251,6 @@ a img {
   align-items: flex-start;
   gap: 2rem;
   flex-wrap: wrap;
-
 }
 
 .produto-card {
@@ -264,20 +259,18 @@ a img {
   border-radius: 8px;
   overflow: hidden;
   width: 50%;
-  /* Cada card ocupa 45% da largura em desktop */
+  /* Em desktop, cada card ocupa 50% (ajuste se necessário) */
   display: flex;
   flex-direction: column;
   text-align: left;
-
   height: 65vh;
-
-  transition: ease 0.2s;
+  transition: transform 0.2s ease;
 }
 
 .produto-card img {
   width: 100%;
-  height: auto;
-  /* A imagem é exibida inteira, sem cortar */
+  height: 35%;
+  object-fit: cover;
   display: block;
 }
 
@@ -306,18 +299,157 @@ a img {
   margin-bottom: 0.5rem;
   font-size: 1rem;
   font-family: "Lato", sans-serif;
+  text-align: justify;
 }
 
-/* Responsividade: para telas pequenas, os cards ocupam 100% em coluna */
+/* Responsividade para Produtos */
 @media (max-width: 768px) {
   .produto-card {
-    width: 100%;
+    width: 90%;
+    /* Em mobile, os cards ocupam 90% da largura */
   }
 }
 
-/* Seção de Serviços: layout em duas colunas */
-.servicos {
+/* Carrossel de Forros */
+.forros-carousel {
   padding: 2rem;
+  background-color: #fff;
+  text-align: center;
+  position: relative;
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.forros-carousel h2.section-title {
+  margin-bottom: 1rem;
+  color: #ba1823;
+}
+
+/* Container do carrossel de forros com toque personalizado */
+.forros-carousel-container {
+  overflow: hidden;
+  width: 100%;
+  margin: 0 auto;
+  touch-action: pan-x;
+  /* Impede que o toque horizontal dispare o scroll vertical da página */
+}
+
+/* Faixa de cards (track) */
+.forros-carousel-track {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Cada card do carrossel de forros (4 por vez no desktop) */
+.forros-card {
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  padding: 1rem;
+}
+
+.forros-card img {
+  width: 100%;
+  height: 30vh;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.forros-info {
+  text-align: left;
+  margin-top: 0.5rem;
+}
+
+.forros-info h3 {
+  font-family: "Lexend Deca", sans-serif;
+  font-size: 1.2rem;
+  color: #ba1823;
+  margin-bottom: 0.5rem;
+}
+
+.forros-info p {
+  font-family: "Lato", sans-serif;
+  font-size: 0.9rem;
+  text-align: justify;
+}
+
+/* Botões de navegação para carrossel de forros */
+.forros-prev,
+.forros-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(186, 24, 35, 0.8);
+  color: #fffdff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  font-size: 1.5rem;
+  line-height: 40px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.forros-prev {
+  left: 1rem;
+}
+
+.forros-next {
+  right: 1rem;
+}
+
+/* Barra deslizante do carrossel de forros */
+.forros-slider {
+  margin-top: 1rem;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.forros-range {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #ddd;
+  outline: none;
+  border-radius: 3px;
+}
+
+.forros-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ba1823;
+  cursor: pointer;
+}
+
+.forros-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #ba1823;
+  cursor: pointer;
+}
+
+/* Responsividade para Carrossel de Forros */
+@media (max-width: 768px) {
+  .forros-card {
+    flex: 0 0 90%;
+    /* Em mobile, os cards ocupam 90% da largura */
+    margin: 0 auto;
+  }
+}
+
+/* Seção de Serviços: layout em duas colunas (ajustado para centralizar no mobile) */
+.servicos {
+
   background-color: #fff;
   display: flex;
   justify-content: center;
@@ -334,29 +466,18 @@ a img {
   flex-wrap: wrap;
 }
 
-.servicos-image {
-  width: 70%;
-  min-width: 300px;
-}
-
 
 
 .servicos p {
-  width: 90%;
+  width: 90vw;
 
 }
 
-.servicos-image img {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
-}
 
 .servicos-text {
-  width: 100%;
+  width: 90%;
   display: flex;
   justify-content: center;
-
   min-width: 300px;
   text-align: justify;
   font-size: 1.1rem;
@@ -364,7 +485,7 @@ a img {
 
 /* Seção de Orçamento: formulário com borda personalizada */
 .orcamento {
-  padding: 2rem;
+
   background-color: #f9f9f9;
   text-align: center;
 }
@@ -410,12 +531,11 @@ a img {
   transform: scale(1.05);
 }
 
-
-
-/* Exemplo de card de produto (já existente) */
+/* Exemplo de card de produto (caso exista duplicidade, este é removido se não utilizado) */
 .produto-card {
   position: relative;
-  width: 280px;
+  width: 330px;
+  height: 60vh;
   overflow: hidden;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -446,17 +566,12 @@ a img {
   padding: 1rem;
 }
 
-
-
 .produto-card:hover .overlay {
   opacity: 1;
 }
 
-
 /* Seção de Contato */
 .contato {
-  padding: 2rem;
-  background-color: #fff;
   text-align: center;
 }
 
@@ -486,10 +601,10 @@ footer {
   font-size: 0.9rem;
 }
 
-/* Responsividade: mobile */
+/* Responsividade: mobile geral */
 @media (max-width: 768px) {
 
-  /* Navbar: só o logo e o botão ficam visíveis */
+  /* Navbar: só o logo fica visível */
   .navbar {
     padding: 0.8rem 1rem;
   }
@@ -512,6 +627,9 @@ footer {
   }
 
   /* Produtos: os cards já se adaptam via grid */
+  .produto-card {
+    width: 90%;
+  }
 
   /* Serviços: layout em coluna */
   .servicos-container {
@@ -535,5 +653,43 @@ footer {
     display: flex;
     align-items: center;
     height: 50%;
+  }
+
+  /* Ajuste para o Carrossel de Forros: garante que não haja overflow horizontal */
+  .forros-carousel,
+  .forros-carousel-container,
+  .forros-carousel-track {
+    max-width: 100vw;
+    /* overflow-x: hidden; */
+  }
+
+  .forros-card {
+    flex: 0 0 90%;
+    margin: 0 auto;
+  }
+
+  .section-title{
+    font-family: "Lexend Deca", sans-serif;
+    font-size: 1.7rem;
+    color: #ba1823;
+    text-align: center;
+    margin: 2rem 0 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .carousel-container{
+    width: 100%;
+  }
+  .carousel-slide{
+    width: 100%;
+    height: 30vh;
+  }
+
+  .produto-card{
+    height: 70vh;
   }
 }

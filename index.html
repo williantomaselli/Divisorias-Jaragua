@@ -51,9 +51,9 @@
     <section id="carousel" class="carousel">
       <div class="carousel-container">
         <div class="carousel-slide">
-          <img src="Imagens/DivisoriaEucatex1.webp" alt="Divisórias Jaraguá - Slide 1">
-          <img src="Imagens/DivisóriaEucatex.webp" alt="Divisórias Jaraguá - Slide 2">
-          <img src="Imagens/DivisóriaDryWall.jpg" alt="Divisórias Jaraguá - Slide 3">
+          <img src="Imagens/divisória.jpg" alt="Divisórias Jaraguá - Slide 2">
+          <img src="Imagens/Divisória1.jpg" alt="Divisórias Jaraguá - Slide 1">
+          <img src="Imagens/divisória2.jpg" alt="Divisórias Jaraguá - Slide 3">
         </div>
       </div>
       <button class="prev" aria-label="Imagem anterior">&#10094;</button>
@@ -62,94 +62,182 @@
 
     <!-- Seção de Produtos com Cards Grandes -->
     <section id="produtos" class="produtos">
-      <h2 class="section-title">Produtos</h2>
+      <h2 class="section-title" style="width: 90vw; background-color: #ba1823; color: white; border-radius: 15px;">
+        Produtos</h2>
+      <h3 style="margin: 3vh;">Divisórias e forros</h3>
       <div class="produtos-grid">
         <!-- Card Divisórias -->
         <div class="produto-card">
-          <img src="Imagens/DivisoriaEucatex1.webp" alt="Divisórias">
+          <img src="Imagens/Divisória2.jpg" alt="Divisórias">
           <div class="produto-info">
-            <h3>Divisórias</h3>
+            <h3>Divisórias EUCATEX</h3>
             <ul>
-              <li>EUCATEX</li>
-              <li>Gesso Acartonado (Drywall)</li>
-              <li>PVC</li>
-              <li>Cimentícia</li>
+              <li>Leve, resistente e de fácil instalação, a Divisória Eucatex é ideal para escritórios, comércios e
+                ambientes corporativos. Com excelente acabamento, proporciona privacidade e organização, além de
+                permitir a personalização com diferentes cores e texturas.</li>
             </ul>
           </div>
         </div>
-        <!-- Card Forros -->
         <div class="produto-card">
-          <img src="Imagens/DivisóriaDryWall.jpg" alt="Forros">
+          <img src="Imagens/DivisóriaDryWall.jpg" alt="Divisórias">
           <div class="produto-info">
-            <h3>Forros</h3>
+            <h3>Divisória Drywall</h3>
             <ul>
-              <li>Isopor</li>
-              <li>PVC</li>
-              <li>Mineral</li>
-              <li>Boreal</li>
-              <li>Gesso Acartonado</li>
-              <li>Gesso Película</li>
+              <li>Versátil e moderna, a Divisória de Gesso Acartonado (Drywall) é ideal para ambientes internos,
+                proporcionando isolamento acústico e térmico. Leve e de rápida instalação, permite diversas
+                configurações e acabamentos, garantindo praticidade e elegância para qualquer espaço.</li>
             </ul>
           </div>
         </div>
-      </div>
-    </section>
-
-
-    <!-- Seção de Serviços com imagem e texto lado a lado -->
-    <section id="servicos" class="servicos">
-      <h2 class="section-title">Serviços</h2>
-      <div class="servicos-container">
-        <!-- <div class="servicos-image">
-          <img src="Imagens/DivisoriaEucatex1.webp" alt="Serviços de Divisórias">
-        </div> -->
-        <div class="servicos-text">
-          <p>
-            Nossos serviços incluem instalação, manutenção e consultoria especializada para divisórias e forros,
-            garantindo sempre um alto padrão de qualidade e um atendimento totalmente personalizado. Contamos com uma
-            equipe experiente e qualificada, pronta para oferecer soluções eficientes e adaptadas às necessidades do seu
-            espaço.
-
-            Trabalhamos com agilidade, precisão e segurança em cada projeto, sempre buscando transformar seu ambiente de
-            forma funcional e esteticamente agradável. Nosso compromisso é proporcionar um resultado duradouro, aliando
-            qualidade, inovação e excelência no atendimento.
-          </p>
+        <div class="produto-card">
+          <img src="Imagens/DivisoriaPVC.jpg" alt="Divisórias">
+          <div class="produto-info">
+            <h3>Divisória de PVC</h3>
+            <ul>
+              <li>Leve, resistente e de fácil manutenção, a Divisória de PVC é uma solução prática para dividir
+                ambientes internos. Com instalação rápida e design clean, oferece durabilidade, resistência à umidade e
+                fácil limpeza, sendo ideal para escritórios, comércios e espaços industriais.</li>
+            </ul>
+          </div>
         </div>
-      </div>
-    </section>
+        <div class="produto-card">
+          <img src="Imagens/DivisoriaCimenticia.jpg" alt="Divisórias">
+          <div class="produto-info">
+            <h3>Divisória Cimentícia</h3>
+            <ul>
+              <li>Robusta e versátil, a Divisória Cimentícia é ideal para ambientes que exigem alta resistência mecânica
+                e durabilidade. Com excelente desempenho acústico e térmico, suporta umidade e impactos, sendo perfeita
+                para construções comerciais, industriais e residenciais.</li>
+            </ul>
+          </div>
+        </div>
 
-    <!-- Seção de Orçamento com formulário personalizado -->
-    <section id="orcamento" class="orcamento">
-      <h2 class="section-title">Solicite seu Orçamento</h2>
-      <form action="#" method="post" class="form-orcamento">
-        <label for="nome">Nome:</label>
-        <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+        <!-- Card Forros -->
+        <!-- Seção: Carrossel de Forros -->
+        <section id="forros-carousel" class="forros-carousel">
+          <h2 class="section-title" style="width: 90vw; background-color: #ba1823; color: white; border-radius: 15px; margin-bottom: 7vh;">FORROS</h2>
+          <div class="forros-carousel-container">
+            <div class="forros-carousel-track">
+              <!-- Card 1: Forro de PVC -->
+              <div class="forros-card">
+                <img src="Imagens/ForroPVC.jpg" alt="Forro de PVC">
+                <div class="forros-info">
+                  <h3>Forro de PVC</h3>
+                  <p>Durável, resistente à umidade e de fácil manutenção – ideal para ambientes úmidos com acabamento
+                    moderno.</p>
+                </div>
+              </div>
+              <!-- Card 2: Forro de Isopor -->
+              <div class="forros-card">
+                <img src="Imagens/ForroIsopor.jpg" alt="Forro de Isopor">
+                <div class="forros-info">
+                  <h3>Forro de Isopor</h3>
+                  <p>Leve e econômico, oferece excelente isolamento térmico e acústico, com instalação rápida e segura.
+                  </p>
+                </div>
+              </div>
+              <!-- Card 3: Forro Mineral -->
+              <div class="forros-card">
+                <img src="Imagens/ForroMineral.jpg" alt="Forro Mineral">
+                <div class="forros-info">
+                  <h3>Forro Mineral</h3>
+                  <p>Alto desempenho acústico e resistência ao fogo; solução funcional e sofisticada para ambientes
+                    corporativos.</p>
+                </div>
+              </div>
+              <!-- Card 4: Forro Boreal -->
+              <div class="forros-card">
+                <img src="Imagens/ForroBoreal.webp" alt="Forro Boreal">
+                <div class="forros-info">
+                  <h3>Forro Boreal</h3>
+                  <p>Feito de lã de vidro, combina isolamento térmico e acústico de alto nível e contribui para a
+                    eficiência energética.</p>
+                </div>
+              </div>
+              <!-- Card 5: Forro de Gesso Acartonado -->
+              <div class="forros-card">
+                <img src="Imagens/ForroAcartonado.jpg" alt="Forro de Gesso Acartonado">
+                <div class="forros-info">
+                  <h3>Forro de Gesso Acartonado</h3>
+                  <p>Versátil e elegante, permite rebaixos decorativos e possui ótimas propriedades termoacústicas.</p>
+                </div>
+              </div>
+              <!-- Card 6: Forro de Gesso com Película -->
+              <div class="forros-card">
+                <img src="Imagens/ForroGessoComPelicula.webp" alt="Forro de Gesso com Película">
+                <div class="forros-info">
+                  <h3>Forro de Gesso com Película</h3>
+                  <p>Une a sofisticação do gesso à praticidade do PVC, com superfície lisa, lavável e de manutenção
+                    facilitada.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Botões de navegação -->
+          <button class="forros-prev" aria-label="Anterior">&#10094;</button>
+          <button class="forros-next" aria-label="Próximo">&#10095;</button>
+          <div class="forros-slider">
+            <input type="range" min="0" max="100" value="0" class="forros-range">
+          </div>
+        </section>
 
-        <label for="email">E-mail:</label>
-        <input type="email" id="email" name="email" placeholder="Seu email" required>
 
-        <label for="mensagem">Mensagem:</label>
-        <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
 
-        <button type="submit" class="btn">Enviar</button>
-      </form>
-    </section>
+        <!-- Seção de Serviços com imagem e texto lado a lado -->
+        <section id="servicos" class="servicos">
+          <h2 class="section-title" >Serviços</h2>
+          <div class="servicos-container">
+            <div class="servicos-text">
+              <p>
+                Nossos serviços incluem instalação, manutenção e consultoria especializada para divisórias e forros,
+                garantindo sempre um alto padrão de qualidade e um atendimento totalmente personalizado. Contamos com
+                uma
+                equipe experiente e qualificada, pronta para oferecer soluções eficientes e adaptadas às necessidades do
+                seu
+                espaço.
 
-    <!-- Seção de Contato -->
-    <section id="contato" class="contato">
-      <h2 class="section-title">Contato</h2>
-      <div class="contato-links">
-        <a href="https://wa.me/5500000000" target="_blank" aria-label="Contate via WhatsApp">
-          <img src="Imagens/whatsapp.png" alt="Ícone WhatsApp">
-          WhatsApp
-        </a>
-        <a href="https://www.facebook.com/divisoriasjgs/?_rdr" target="_blank"
-          aria-label="Visite nossa página no Facebook">
-          <img src="Imagens/facebook.png" alt="Ícone Facebook">
-          Facebook
-        </a>
-      </div>
-    </section>
+                Trabalhamos com agilidade, precisão e segurança em cada projeto, sempre buscando transformar seu
+                ambiente de
+                forma funcional e esteticamente agradável. Nosso compromisso é proporcionar um resultado duradouro,
+                aliando
+                qualidade, inovação e excelência no atendimento.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Seção de Orçamento com formulário personalizado -->
+        <section id="orcamento" class="orcamento">
+          <h2 class="section-title" >Solicite seu orçamento</h2>
+          <form action="#" method="post" class="form-orcamento">
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" placeholder="Seu email" required>
+
+            <label for="mensagem">Mensagem:</label>
+            <textarea id="mensagem" name="mensagem" placeholder="Como podemos ajudar?" required></textarea>
+
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+        </section>
+
+        <!-- Seção de Contato -->
+        <section id="contato" class="contato">
+          <h2 class="section-title" style="width: 90vw; border-radius: 15px; margin-bottom: 3vh;">Contato</h2>
+          <div class="contato-links">
+            <a href="https://wa.me/5500000000" target="_blank" aria-label="Contate via WhatsApp">
+              <img src="Imagens/whatsapp.png" alt="Ícone WhatsApp">
+              WhatsApp
+            </a>
+            <a href="https://www.facebook.com/divisoriasjgs/?_rdr" target="_blank"
+              aria-label="Visite nossa página no Facebook">
+              <img src="Imagens/facebook.png" alt="Ícone Facebook">
+              Facebook
+            </a>
+          </div>
+        </section>
   </main>
 
   <!-- Rodapé -->
