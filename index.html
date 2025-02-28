@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Divisórias Jaraguá - Especializada em divisórias e forros de alta qualidade. Conheça nossos produtos e serviços.">
+  <meta name="description"
+    content="Divisórias Jaraguá - Especializada em divisórias e forros de alta qualidade. Conheça nossos produtos e serviços.">
   <title>Divisórias Jaraguá</title>
   <link rel="stylesheet" href="style.css">
 
   <!-- Fontes: Lato e Lexend Deca (Google Fonts) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Lexend+Deca:wght@400;700&display=swap"
+    rel="stylesheet">
 </head>
+
 <body>
-  <!-- Cabeçalho com Navbar -->
+  <!-- Cabeçalho com Navbar fixa -->
   <header>
     <nav class="navbar" role="navigation">
       <div class="logo">
         <a href="#home">Divisórias Jaraguá</a>
       </div>
+      <!-- No mobile, os itens do menu são ocultados -->
       <ul class="nav-links">
         <li><a href="#home">Home</a></li>
         <li><a href="#produtos">Produtos</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#orcamento">Orçamento</a></li>
-        <li><a href="#contato">Fale conosco!</a></li>
+        <li><a href="#contato">Contato</a></li>
       </ul>
       <a href="#orcamento" class="btn-orcamento">Faça seu Orçamento</a>
     </nav>
@@ -42,71 +47,80 @@
       </div>
     </section>
 
-    <!-- Carrossel de Imagens -->
+    <!-- Carrossel de Imagens (1 imagem por slide) -->
     <section id="carousel" class="carousel">
       <div class="carousel-container">
         <div class="carousel-slide">
-          <img src="Imagens/DivisoriaEucatex1.webp" alt="Imagem 1 - Divisórias Jaraguá">
-          <img src="Imagens/DivisóriaEucatex.webp" alt="Imagem 2 - Divisórias Jaraguá">
-          <img src="Imagens/DivisóriaDryWall.jpg" alt="Imagem 3 - Divisórias Jaraguá">
+          <img src="Imagens/DivisoriaEucatex1.webp" alt="Divisórias Jaraguá - Slide 1">
+          <img src="Imagens/DivisóriaEucatex.webp" alt="Divisórias Jaraguá - Slide 2">
+          <img src="Imagens/DivisóriaDryWall.jpg" alt="Divisórias Jaraguá - Slide 3">
         </div>
       </div>
       <button class="prev" aria-label="Imagem anterior">&#10094;</button>
       <button class="next" aria-label="Próxima imagem">&#10095;</button>
     </section>
 
-    <!-- Seção de Produtos -->
+    <!-- Seção de Produtos com Cards Grandes -->
     <section id="produtos" class="produtos">
-      <h2>Produtos</h2>
+      <h2 class="section-title">Produtos</h2>
       <div class="produtos-grid">
-        <div class="produto">
-          <h3>Divisórias</h3>
-          <ul>
-            <li>EUCATEX</li>
-            <li>Gesso Acartonado (Drywall)</li>
-            <li>PVC</li>
-            <li>Cimentícia</li>
-          </ul>
+        <!-- Card Divisórias -->
+        <div class="produto-card">
+          <img src="Imagens/DivisoriaEucatex1.webp" alt="Divisórias">
+          <div class="produto-info">
+            <h3>Divisórias</h3>
+            <ul>
+              <li>EUCATEX</li>
+              <li>Gesso Acartonado (Drywall)</li>
+              <li>PVC</li>
+              <li>Cimentícia</li>
+            </ul>
+          </div>
         </div>
-        <div class="produto">
-          <h3>Forros</h3>
-          <ul>
-            <li>Isopor</li>
-            <li>PVC</li>
-            <li>Mineral</li>
-            <li>Boreal</li>
-            <li>Gesso Acartonado</li>
-            <li>Gesso Película</li>
-          </ul>
+        <!-- Card Forros -->
+        <div class="produto-card">
+          <img src="Imagens/DivisóriaDryWall.jpg" alt="Forros">
+          <div class="produto-info">
+            <h3>Forros</h3>
+            <ul>
+              <li>Isopor</li>
+              <li>PVC</li>
+              <li>Mineral</li>
+              <li>Boreal</li>
+              <li>Gesso Acartonado</li>
+              <li>Gesso Película</li>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Seção de Serviços -->
+
+    <!-- Seção de Serviços com imagem e texto lado a lado -->
     <section id="servicos" class="servicos">
-      <h2>Serviços</h2>
-      <p>Nossos serviços abrangem instalação, manutenção e consultoria para divisórias e forros, sempre com alto padrão de qualidade e atendimento personalizado.</p>
+      <h2 class="section-title">Serviços</h2>
+      <div class="servicos-container">
+        <!-- <div class="servicos-image">
+          <img src="Imagens/DivisoriaEucatex1.webp" alt="Serviços de Divisórias">
+        </div> -->
+        <div class="servicos-text">
+          <p>
+            Nossos serviços incluem instalação, manutenção e consultoria especializada para divisórias e forros,
+            garantindo sempre um alto padrão de qualidade e um atendimento totalmente personalizado. Contamos com uma
+            equipe experiente e qualificada, pronta para oferecer soluções eficientes e adaptadas às necessidades do seu
+            espaço.
+
+            Trabalhamos com agilidade, precisão e segurança em cada projeto, sempre buscando transformar seu ambiente de
+            forma funcional e esteticamente agradável. Nosso compromisso é proporcionar um resultado duradouro, aliando
+            qualidade, inovação e excelência no atendimento.
+          </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Seção de Contato -->
-    <section id="contato" class="contato">
-        <h2>Contato</h2>
-        <div class="contato-links">
-           <a href="https://wa.me/5500000000" target="_blank" aria-label="Contate via WhatsApp">
-             <img src="Imagens/whatsapp.png" alt="Ícone WhatsApp">
-             WhatsApp
-           </a>
-           <a href="https://www.facebook.com/divisoriasjgs/?_rdr" target="_blank" aria-label="Visite nossa página no Facebook">
-             <img src="Imagens/facebook.png" alt="Ícone Facebook">
-             Facebook
-           </a>
-        </div>
-      </section>
-    </main>
-
-    <!-- Seção de Orçamento -->
+    <!-- Seção de Orçamento com formulário personalizado -->
     <section id="orcamento" class="orcamento">
-      <h2>Solicite seu Orçamento</h2>
+      <h2 class="section-title">Solicite seu Orçamento</h2>
       <form action="#" method="post" class="form-orcamento">
         <label for="nome">Nome:</label>
         <input type="text" id="nome" name="nome" placeholder="Seu nome" required>
@@ -121,7 +135,22 @@
       </form>
     </section>
 
-    
+    <!-- Seção de Contato -->
+    <section id="contato" class="contato">
+      <h2 class="section-title">Contato</h2>
+      <div class="contato-links">
+        <a href="https://wa.me/5500000000" target="_blank" aria-label="Contate via WhatsApp">
+          <img src="Imagens/whatsapp.png" alt="Ícone WhatsApp">
+          WhatsApp
+        </a>
+        <a href="https://www.facebook.com/divisoriasjgs/?_rdr" target="_blank"
+          aria-label="Visite nossa página no Facebook">
+          <img src="Imagens/facebook.png" alt="Ícone Facebook">
+          Facebook
+        </a>
+      </div>
+    </section>
+  </main>
 
   <!-- Rodapé -->
   <footer>
@@ -130,4 +159,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
