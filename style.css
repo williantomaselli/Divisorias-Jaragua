@@ -3,11 +3,14 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: "Lato";
 }
 
 body {
   font-family: Arial, sans-serif;
-  background-color: #fffdff;
+  background: rgb(237, 232, 237);
+  background: radial-gradient(circle, rgba(237, 232, 237, 1) 0%, rgba(255, 253, 255, 1) 50%, rgba(237, 232, 237, 1) 100%);
   color: #333;
   line-height: 1.6;
 }
@@ -17,8 +20,10 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background-color: #ba1823;
+  background: rgb(156, 18, 27);
+  background: radial-gradient(circle, rgba(156, 18, 27, 1) 0%, rgba(186, 24, 35, 1) 50%, rgba(156, 18, 27, 1) 100%);
   padding: 1rem 2rem;
+
 }
 
 .navbar .logo a {
@@ -42,10 +47,20 @@ body {
   text-decoration: none;
   font-size: 1rem;
   transition: color 0.3s ease;
+  transition: ease 0.1s;
+
+  border-bottom: solid 2px rgba(255, 255, 255, 0);
 }
 
 .nav-links a:hover {
-  color: #ffd700;
+  border-bottom: solid 2px white;
+  border-radius: 5px;
+  padding-bottom: 10px;
+
+}
+
+.banner a{
+  transform: scale(1.2);
 }
 
 .btn-orcamento {
@@ -56,10 +71,11 @@ body {
   border-radius: 4px;
   font-weight: bold;
   transition: background-color 0.3s ease;
+  transition: ease 0.5s;
 }
 
 .btn-orcamento:hover {
-  background-color: #f0f0f0;
+  transform: scale(1.2);
 }
 
 /* Banner Principal */
@@ -87,13 +103,16 @@ body {
 }
 
 .banner-content h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
+  font-size: 5rem;
+  margin-bottom: 0.5rem;
+  font-family: "Lexend Deca";
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.137);
 }
 
 .banner-content p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
+  font-family: "Lato";
 }
 
 .btn {
@@ -105,10 +124,17 @@ body {
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  font-family: "Lato";
 }
 
-.btn:hover {
-  background-color: #a1141b;
+a img{
+  width: 30px;
+  height: auto;
+}
+
+.banner-content .btn:hover {
+  transform: scale(1.2);
+  font-family: "Lato";
 }
 
 /* Carrossel */
@@ -137,6 +163,7 @@ body {
   flex-shrink: 0;
   object-fit: cover;
   object-position: center;
+  border-radius: 1vh;
 }
 
 /* Botões do Carrossel */
@@ -218,6 +245,13 @@ body {
   font-size: 1.1rem;
 }
 
+footer {
+  background-color: #ba1823;
+  color: #fffdff;
+  text-align: center;
+  padding: 1rem;
+}
+
 /* Seção de Orçamento */
 .orcamento {
   padding: 2rem;
@@ -279,5 +313,5 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  transition: color 
+  transition: color
 }
