@@ -333,7 +333,7 @@ a img {
   overflow: hidden;
   width: 100%;
   margin: 0 auto;
-  touch-action: pan-x;
+  
   /* Impede que o toque horizontal dispare o scroll vertical da página */
 }
 
